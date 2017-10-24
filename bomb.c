@@ -329,8 +329,7 @@ int32_t function3(int64_t a1, int32_t a2) {
     int32_t result;
     if (a2 != 0) {
         // 0x8048fc8
-        result = a1 * (int64_t)function3(a1, a2 - 1);
-        // branch -> 0x8048fe8
+        result = a1 * function3(a1, a2 - 1);
     } else {
         result = 1;
     }
